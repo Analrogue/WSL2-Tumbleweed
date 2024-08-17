@@ -1,0 +1,45 @@
+# etc
+alias sudo='sudo '
+
+# rc
+alias zshrc='vim ~/.zshrc'
+alias aliasrc='vim ~/.aliasrc'
+alias functionrc='vim ~/.functionrc'
+alias vimrc='vim ~/.vimrc'
+
+# aliasfunction
+alias aliasfunction='echo -e "\
+rc - *rc \n\
+zypper - aliasinstall, aliasquery, aliasremove \n\
+eza - aliasexa \n\
+weather - aliasweather \n\
+"'
+
+
+# Eza (Exa)
+# alias ls='ls --color=auto'
+alias ls='eza --icons'
+alias lsal='eza --icons --long --all'
+alias lsl='eza --icons -lbF --git'                                                # list, size, type, git
+alias lsll='eza --icons -lbGF --git'                                              # long list
+alias lsllm='eza --icons -lbGF --git --sort=modified'                             # long list, modified date sort
+alias lslS='eza --icons -1'                                                       # one column, just names
+alias lslt='eza --icons --tree --level=2'                                         # tree
+alias aliasexa='echo -e "ls=eza --icons \n\
+lsal=eza --icons --long --all \n\
+lsl=eza --icons -lbF --git \n\
+lsll=eza --icons -lbGF --git \n\
+lsllm=eza --icons -lbGF --git --sort=modified \n\
+lslS=eza --icons -1 \n\
+lslt=eza --icons --tree --level=2"'
+
+# Weather
+alias aliasweather='echo -e "weather1 : seoul \n\
+weather2 : nationwide \n\
+weather3 : time-summary \n\
+weahter4 : time-chart \n\
+"'
+alias weather1="curl 'ko.wttr.in/서울?format=%l:+%m+%c+바람:%w+기온:%t+습도:%h\n'"
+alias weather2="curl -s 'ko.wttr.in/{서울,인천,춘천,강릉,청주,대전,전주,광주,대구,울산,부산,제주}?format=%l:+%c+바람:%w+기온:%t+습도:%h+체감온도:%f\n'"
+alias weather3="curl ko.wttr.in/서울"
+alias weather4="curl 'v2d.wttr.in/Seoul'"
