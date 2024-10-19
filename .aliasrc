@@ -10,9 +10,14 @@ alias vimrc='vim ~/.vimrc'
 # aliasfunction
 alias aliasfunction='echo -e "\
 rc - *rc \n\
-zypper - aliasinstall, aliasquery, aliasremove \n\
+zypper \n\
 eza - aliasexa \n\
 weather - aliasweather \n\
+"'
+
+# Zypper
+alias aliaszypper='echo -e "\n\
+clean remove :zypper remove --clean-deps \n\
 "'
 
 
